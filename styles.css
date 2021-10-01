@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -96,7 +97,7 @@
 /* ============================================ start of hero intro section ============================================ */
 
 .hero-intro-section .rz-intro-wrapper {
-  padding: 120px 0;
+  padding: 180px 0;
   margin: 0 15px;
 }
 
@@ -228,9 +229,13 @@
 }
 
 .hero-work-section .work-div .rz-projects .rz-proj-tile {
-  padding: 0 20px;
+  padding: 30px 20px;
   transition: var(--transition);
   cursor: pointer;
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc {
