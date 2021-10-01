@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transition: all 0.3s ease;
+  --primary-highlight-color: orangered;
+  --primary-grey-text: #757575;
+  --secondary-grey-text: #515151;
+  --primary-black-text: #000;
+  --font-roboto-slab: 'Roboto Slab', serif;
+  --font-tcyz: tcyz;
+  --border-radious: 12px;
+}
+
+.header-wrapper, .hero-intro-section, .hero-skill-section, .hero-work-section, .hero-connect-section, .hero-footer-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rz-active {
+  color: var(--primary-black-text);
+}
+
+.rz-highlight {
+  color: var(--primary-highlight-color);
+}
+
+.hero-heading::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: var(--primary-grey-text);
+  margin-right: 20px;
+}
+
+/* ============================================ end of root section  ============================================ */
+
+/* ============================================ start of hero header section ============================================ */
+
+.rz-logo {
+  /* width: 34px; */
+  height: 50px;
+}
+
+.rz-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.rz-navbar .rz-navbar-content .rz-content {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-roboto-slab);
+}
+
+.rz-navbar .rz-navbar-content .rz-content li {
+  padding: 12px 16px;
+}
+
+.rz-navbar .rz-navbar-content .rz-content-links li a {
+  text-decoration: none;
+  transition: var(--transition);
+  color: var(--primary-grey-text);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.rz-navbar .rz-navbar-content .rz-content-links li a:hover {
+  color: #000;
+}
+
+.rz-navbar .rz-navbar-content .rz-content-social li:hover {
+  cursor: pointer;
+}
+
+.rz-navbar .rz-navbar-content .rz-content-social li a {
+  text-decoration: none;
+  transition: var(--transition);
+  color: #3f3f3f;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.rz-navbar .rz-navbar-content .rz-content-social li a:hover {
+  color: #000;
+}
+
+/* ============================================ end of navbar header section ============================================ */
+
+/* ============================================ start of hero intro section ============================================ */
+
+.hero-intro-section .rz-intro-wrapper {
+  padding: 120px 0;
+  margin: 0 15px;
+}
+
+.hero-intro-section .rz-intro-div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-intro-section .rz-intro-div .rz-intro-greet h1 {
+  color: var(--primary-grey-text);
+  font-family: var(--font-tcyz);
+  /* min, val, max */
+  font-size: clamp(2rem, 10vw, 4rem);
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: left;
+  text-transform: none;
+}
+
+.hero-intro-section .rz-intro-div .rz-intro-description p {
+  color: var(--secondary-grey-text);
+  font-family: var(--font-tcyz);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 10px 0 0 0;
+  text-align: left;
+  text-transform: none;
+}
+
+/* ============================================ end of intro section ============================================ */
+
+/* ============================================ start of skill section ============================================ */
+
+.hero-skill-section .rz-skill-wrapper {
+  padding: 60px 0;
+  margin: 0 15px;
+}
+
+.rz-skill-wrapper .skill-div .rz-skill-desc {
+  max-width: 800px;
+  position: relative;
+}
+
+.rz-skill-wrapper .skill-div .rz-skill-desc p {
+  position: relative;
+  margin: 40px 0;
+  color: var(--secondary-grey-text);
+  font-size: 16px;
+}
+
+.rz-skill-wrapper .rz-skill-list .skill-set {
+  list-style: outside none none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(80px, 100vw));
+}
+
+.rz-skill-wrapper .rz-skill-list .skill-set li {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.rz-skill-wrapper .rz-skill-list .skill-set li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  color: var(--primary-highlight-color);
+  font-size: 20px;
+  line-height: 12px;
+}
+
+.rz-skill-wrapper .rz-skill-list .skill-set li:hover {
+  transform: translateY(-3px);
+}
+
+/* ============================================ end of skill section ============================================ */
+
+.rz-skill-wrapper .skill-div .rz-skill-desc h2, .hero-work-section .rz-work-desc h2, .hero-connect-section .rz-connect-desc h2 {
+  margin: 26px 0;
+  display: flex;
+  position: relative;
+  -moz-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  /*  */
+  color: var(--primary-black-text);
+  font-family: var(--font-tcyz);
+  font-weight: 400;
+  font-size: clamp(1rem, 10vh, 2.5rem);
+}
+
+/* ============================================ start of work section ============================================ */
+
+.hero-work-section .rz-work-wrapper {
+  padding: 60px 0;
+  margin: 15px;
+}
+
+.hero-work-section .work-div .rz-work-desc {
+  max-width: 800px;
+}
+
+.hero-work-section .work-div .rz-work-desc p {
+  color: var(--primary-grey-text);
+  margin-bottom: 30px;
+}
+
+.hero-work-section .work-div .rz-projects .proj-banner img {
+  /* max-width: 260px; */
+  width: 100%;
+  transition: var(--transition);
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile:hover .proj-banner img {
+  transform: scale(1.03);
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-col {
+  margin-bottom: 40px;
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile {
+  padding: 0 20px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc {
+  padding: 0 15px;
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc h3 {
+  margin-top: 30px;
+  font-size: clamp(1rem, 10vh, 2rem);
+  font-weight: 500;
+  font-family: var(--font-tcyz);
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc p {
+  color: var(--secondary-grey-text);
+  font-size: 16px;
+  padding: 12px 0;
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc a {
+  color: var(--primary-black-text);
+  font-size: 16px;
+  transition: var(--transition);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero-work-section .work-div .rz-projects .rz-proj-tile:hover .proj-desc a {
+  text-decoration: underline;
+}
+
+/* ============================================ end of work section ============================================ */
+
+/* ============================================ start of connection section ============================================ */
+
+.hero-connect-section .rz-connect-wrapper {
+  padding: 60px 0;
+  margin: 15px;
+}
+
+.hero-connect-section .connect-div .rz-connect-desc {
+  max-width: 800px;
+}
+
+.hero-connect-section .connect-div .rz-connect-desc p {
+  font-size: 16px;
+  color: var(--secondary-grey-text);
+}
+
+.hero-connect-section .connect-div .rz-connect-desc a {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 0.2em;
+  transition: text-underline-offset 500ms, var(--transition);
+}
+
+.hero-connect-section .connect-div .rz-connect-desc a:hover {
+  text-decoration: none;
+  color: var(--primary-highlight-color);
+}
+
+/* ============================================ end of connection section ============================================ */
+
+/* ============================================ start of footer section ============================================ */
+
+.hero-footer-section .rz-footer-wrapper {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================================ end of footer section ============================================ */
