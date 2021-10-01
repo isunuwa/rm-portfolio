@@ -31,7 +31,7 @@
         <div class="container-fluid">
           <div class="rz-navbar">
             <!-- navbar content -->
-            <div class="rz-navbar-content">
+            <div class="rz-navbar-content rz-nav-wrapper">
               <ul class="nav navbar-nav nav-menu rz-content rz-content-links">
                 <li class="nav-item active"><a href="#">home</a></li>
                 <li class="nav-item"><a href="#">contact</a></li>
@@ -55,11 +55,11 @@
 
     <!-- section for hero intro -->
     <section class="hero-intro-section">
-      <div class="container-fluid rz-intro-wrapper">
+      <div class="rz-intro-wrapper">
         <div class="rz-intro-div">
           <div class="rz-intro-greet">
             <h1>
-              I'm Rejoy, welcome to my portfolio. Currently WIP.
+              I'm <span class="rz-active">Rejoy</span>, welcome to my portfolio. Currently WIP.
             </h1>
           </div>
           <div class="rz-intro-description">
@@ -69,6 +69,95 @@
 
       </div>
     </section>
+
+    <!-- section for hero skill -->
+    <section class="hero-skill-section">
+      <div class="rz-skill-wrapper">
+        <rz class="skill-div">
+          <div class="rz-skill-desc">
+            <h2 class="hero-heading">My Skills</h2>
+            <p>Through my studies, I've gained a solid understanding of computer science and web development concepts, and have dedicated a lot of my free time to apply these concepts to real-world scenarios and applications.</p>
+          </div>
+          <div class="rz-skill-list">
+            <ul class="skill-set">
+              <li>PHP (Laravel)</li>
+              <li>MySql</li>
+              <li>c# (.net)</li>
+              <li>ML</li>
+              <li>Git</li>
+            </ul>
+          </div>
+        </rz>
+      </div>
+    </section>
+
+    <!-- section for work -->
+    <section class="hero-work-section">
+      <div class="rz-work-wrapper">
+        <div class="work-div">
+          <div class="rz-work-desc">
+            <h2 class="hero-heading">Work</h2>
+            <p>
+              A man is born to make great changes. I like to stay busy and always develop my skill in any field i am intrested in. Take a look at some of the applications, companies I've dedicated my time and work to.
+            </p>
+          </div>
+          <div class="rz-projects">
+            <div class="row project-timeline">
+              <div class="col-md-6 rz-proj-col">
+                <div class="rz-proj-tile">
+                  <div class="proj-banner">
+                    <img src="./assets/images/project-banner.png" alt="banner img">
+                  </div>
+                  <div class="proj-desc">
+                    <h3 class="proj-heading">Project Name</h3>
+                    <p class="proj-desc">
+                      this is to describe the work of the project in time and work related but not too much.
+                    </p>
+                    <a href="#" target="_blank">view project</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 rz-proj-col">
+                <div class="rz-proj-tile">
+                  <div class="proj-banner">
+                    <a href="#">
+                      <img src="./assets/images/project-banner.png" alt="banner img">
+                    </a>
+                  </div>
+                  <div class="proj-desc">
+                    <h3 class="proj-heading">Project Name</h3>
+                    <p class="proj-overview">
+                      this is to describe the work of the project in time and work related but not too much.
+                    </p>
+                    <a href="#" target="_blank">view project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for connect -->
+    <section class="hero-connect-section">
+      <div class="rz-connect-wrapper">
+        <div class="connect-div">
+          <div class="rz-connect-desc">
+            <h2 class="hero-heading">Lets Buid Someting Together</h2>
+            <p>We could be a match made to a company grow stronger. If you have any questions, or just want to connect feel free to reach me.</p>
+            <a href="mailto:rejoymistry27@gmail.com" target="_blank">rejoymistry27@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for footer -->
+    <footer class="hero-footer-section">
+      <div class="rz-footer-wrapper">
+        <span>designed by <span class="rz-name">rejoy x mistry</span></span>
+      </div>
+    </footer>
     
     <!-- bootstrap and jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
