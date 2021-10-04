@@ -110,8 +110,116 @@ body{
   text-transform: capitalize;
 }
 
-/* styles for toggling theme */
-.rz-navbar .rz-nav-wrapper .rz-content-links .nav-item:last-child{
+
+/* responsive navbar query */
+.responsive-nav{
+  display: none;
+}
+.responsive-nav .rz-res-navbar .burger-outer-div{
+  cursor: pointer;
+  z-index: 10;
+  height: 50px;
+}
+
+.responsive-nav .rz-res-navbar .burger-outer-div{
+  display: block;
+}
+.responsive-nav .rz-res-navbar .burger-outer-div .burger-wrapper{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  float: right;
+  /* margin-right: 10px; */
+}
+.responsive-nav .rz-res-navbar{
+  position: relative;
+}
+.responsive-nav .rz-res-navbar .burger-outer-div .burger div{
+  width: 25px;
+  height: 3px;
+  margin: 10px;
+  background-color: var(--primary-black-text);
+  transition: var(--transition);
+}
+@media only screen and (max-width: 768px ) {
+  .rz-nav-menu{
+    display: none;
+    pointer-events: none;
+  }
+  .rz-nav-header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rz-nav-header-wrapper .mbl-rz-logo{
+    max-height: 32px;
+  }
+  .responsive-nav{
+    display: block;
+  }
+  .responsive-nav .rz-nav-wrapper{
+    margin: 40px 0;
+  }
+
+  .responsive-nav .rz-navbar-wrapper{
+    /* position: absolute; */
+    background: var(--background-color);
+    /* background: pink; */
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: none;
+    position: absolute;
+    /* transform: translateX(-110%); */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  .responsive-nav .rz-navbar-wrapper .rz-content-links li a, .responsive-nav .rz-navbar-wrapper .rz-content-social li a{
+    color: var(--secondary-grey-text);
+  }
+  .responsive-nav .rz-navbar-wrapper .rz-nav-wrapper ul li{
+    padding: 18px 0;
+    text-transform: uppercase;
+  }
+
+  .responsive-nav .rz-navbar-wrapper .rz-nav-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .responsive-nav .rz-navbar-wrapper.active{
+    /* transform: translateX(0); */
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+  .rz-content-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rz-content-social li{
+    padding: 20px;
+
+  }
+  .rz-content-social li a{
+    font-size: 24px;
+  }
+}
+
+/* toggle burger menu */
+.active .line1 {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+
+.active .line3 {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+.fixed-position {
+   position: fixed;
 }
 /* ============================================ end of navbar header section ============================================ */
 
@@ -289,6 +397,7 @@ body{
 
 .hero-work-section .work-div .rz-projects .rz-proj-tile:hover .proj-desc a {
   text-decoration: underline;
+  text-underline-offset: 0.3em;
 }
 
 /* ============================================ end of work section ============================================ */
@@ -317,7 +426,6 @@ body{
   text-decoration-style: dashed;
   text-underline-offset: 0.2em;
   transition: text-underline-offset 500ms, var(--transition);
-  transition: text-underline-offset 500ms;
 }
 
 .hero-connect-section .connect-div .rz-connect-desc a:hover {
