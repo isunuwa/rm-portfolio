@@ -14,6 +14,28 @@
   --font-roboto-slab: 'Roboto Slab', serif;
   --font-tcyz: tcyz;
   --border-radious: 12px;
+  --background-color: #fff;
+  --hover-effect: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* dark theme */
+.dark-theme{
+  --primary-grey-text: #757575;
+  --secondary-grey-text: #c7c7c7;
+  --primary-black-text: #fff;
+  --background-color: #000;
+  --hover-effect: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+  transition: var(--transition);
+}
+
+.fa-moon-o, .fa-circle{
+  color: var(--primary-black-text);
+  transition: var(--transition);
+}
+
+body{
+  background: var(--background-color);
+  transition: var(--transition);
 }
 
 .header-wrapper, .hero-intro-section, .hero-skill-section, .hero-work-section, .hero-connect-section, .hero-footer-section {
@@ -67,13 +89,13 @@
 .rz-navbar .rz-navbar-content .rz-content-links li a {
   text-decoration: none;
   transition: var(--transition);
-  color: var(--primary-grey-text);
+  color: var(--secondary-grey-text);
   font-size: 16px;
   text-transform: capitalize;
 }
 
-.rz-navbar .rz-navbar-content .rz-content-links li a:hover {
-  color: #000;
+.rz-navbar .rz-navbar-content .rz-content-links li a:hover, .rz-navbar .rz-navbar-content .rz-content-social li a:hover {
+  color: var(--primary-black-text);
 }
 
 .rz-navbar .rz-navbar-content .rz-content-social li:hover {
@@ -83,15 +105,14 @@
 .rz-navbar .rz-navbar-content .rz-content-social li a {
   text-decoration: none;
   transition: var(--transition);
-  color: #3f3f3f;
+  color: var(--secondary-grey-text);
   font-size: 18px;
   text-transform: capitalize;
 }
 
-.rz-navbar .rz-navbar-content .rz-content-social li a:hover {
-  color: #000;
+/* styles for toggling theme */
+.rz-navbar .rz-nav-wrapper .rz-content-links .nav-item:last-child{
 }
-
 /* ============================================ end of navbar header section ============================================ */
 
 /* ============================================ start of hero intro section ============================================ */
@@ -166,6 +187,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition);
+  color: var(--primary-black-text);
 }
 
 .rz-skill-wrapper .rz-skill-list .skill-set li::before {
@@ -235,7 +257,7 @@
 }
 
 .hero-work-section .work-div .rz-projects .rz-proj-tile:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--hover-effect);
 }
 
 .hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc {
@@ -244,6 +266,7 @@
 
 .hero-work-section .work-div .rz-projects .rz-proj-tile .proj-desc h3 {
   margin-top: 30px;
+  color: var(--primary-black-text);
   font-size: clamp(1rem, 10vh, 2rem);
   font-weight: 500;
   font-family: var(--font-tcyz);
@@ -311,6 +334,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--primary-grey-text);
 }
 
 /* ============================================ end of footer section ============================================ */
